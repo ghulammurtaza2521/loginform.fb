@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url(./img/img.2.jpg);
+            /* background: center center; */
+            /* background-position: center center; */
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0 auto;
+        }
+
+
+        #main {
+
+            width: 35%;
+            height: 500px;
+            margin: auto;
+            background-color: rgba(160, 153, 153, 0.445);
+            color: rgb(251, 255, 2);
+            border-radius: 10px;
+            box-shadow: 5px 5px 15px rgb(219, 214, 163);
+
+
+            /* padding-left: 10px; */
+            /* text-align: center; */
+        }
+
+        #main1 {
+            width: 100%;
+            padding-left: 28px;
+            font-size: 25px;
+            padding-top: 20px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 80%;
+            font-size: 20px;
+            padding: 12px;
+            /* text-transform: capitalize; */
+            border-radius: 5px;
+            margin-top: 3px;
+            outline: none;
+            border: none;
+        }
+
+        input:focus {
+            box-shadow: 0 0 5px rgb(2, 241, 249);
+        }
+
+        ::placeholder {
+            font-size: 13px;
+            color: rgb(184, 184, 185);
+        }
+
+        #login {
+            width: 86%;
+            margin-top: 5px;
+            outline: none;
+            border: none;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: rgb(131, 251, 211);
+            /* box-shadow: 0 0 5px rgb(253, 253, 2); */
+            color: black;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        button:hover {
+            box-shadow: 0 0 5px rgb(253, 253, 2);
+        }
+
+        .text {
+            font-size: 15px;
+            padding-left: 112px;
+            padding-top: 10px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        #reg {
+            padding-left: 3px;
+            text-decoration: underline;
+            font-size: 18px;
+            font-weight: bold;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        #reg:hover {
+            cursor: pointer;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <h1 style="text-align: center; font-size: 60px;padding-top: 20px;">Login Form</h1>
+        <div id="main1">
+
+            <label for="email">
+                Email:
+                <br>
+                <input type="email" id="email" placeholder="Enter Your Email">
+            </label>
+            <br>
+            <br>
+            <label for="password">
+                Password:
+                <br>
+                <input type="password" id="password" placeholder=" Enter Your Password">
+            </label>
+
+            <br>
+            <br>
+
+            <!-- <button onclick="login()" id="btn">Login</button> -->
+            <button id="login">Login</button>
+
+        </div>
+        <p class="text">Create an account?
+            <!-- <samp onclick="windowOpen()" id="reg">Register</samp></p> -->
+            <samp id="reg" onclick="window.location.href='createAccount.html'">Register</samp>
+        </p>
+    </div>
+    <script type="module" src="index.js"></script>
+</body>
+</html>

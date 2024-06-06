@@ -15,15 +15,17 @@ createAccountButton.addEventListener('click', () => {
     var mNumber = document.getElementById('number').value
     var email = document.getElementById('email').value
     var password = document.getElementById('password').value
-    var gender = document.getElementsByName('gender')
-    for (var i = 0; i < gender.length; i++) {
-        if (gender[i].checked) {
-            console.log(gender[i].value);
-        }
-    }
+    var cnic = document.getElementById('cnic').value
+    // var gender = document.getElementById('rma')
+    // var gender = document.getElementById('rfm')
+    // for (var i = 0; i < gender.length; i++) {
+    //     if (gender[i].checked) {
+    //         console.log(gender[i].value);
+    //     }
+    // }
 
     console.log(email, password);
-    //   console.log(userEmail, userPass);
+    
 
     let userData = {
         userName: userName,
@@ -32,7 +34,9 @@ createAccountButton.addEventListener('click', () => {
         mNumber: mNumber,
         email: email,
         password: password,
-        gender: gender,
+        cnic:cnic
+        // gender: gender,
+        
     }
 
     createUserWithEmailAndPassword(auth, userData.email, userData.password)
@@ -42,15 +46,17 @@ createAccountButton.addEventListener('click', () => {
     const user = userCredential.user;
 
     try {
-      const docRef = await addDoc(collection(db, "Rform"), {
+      const docRef = await addDoc(collection(db, "New Form"), {
         ...userData,
         uid:user.uid
       });
+      alert('data submit')
       console.log("Document written with ID: ", docRef.id);
     } catch (e) {
       console.error("Error adding document: ", e);
     }
-    
+    console.log(userData);
+
     sendEmailVerification(auth.currentUser)
   .then(() => {
     alert('plz Email verifed')
